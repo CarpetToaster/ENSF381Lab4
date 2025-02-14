@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 - Exercise 2</title>
+    </head>
+    <body>
+        <script>
+            let classRoster = ["Alice", "Tom", "Charlie", "Diana", "Evan"];
+
+            console.log("as a string: " + classRoster.toString());
+            console.log(classRoster);
+
+            classRoster.push("Fiona");
+            classRoster.push("Nancy");
+
+            let removed = classRoster.shift("Alice");
+
+            console.log(classRoster);
+            console.log("removed student: " + removed); //checking to see the returned value
+
+            console.log("number of students after all changes :" + classRoster.length);
+
+            let classInfo = {
+                className: "ENSF381: Full-Stack Web Development",
+                instructor: "Dr. Smith",
+                students: classRoster,
+                schedule: ["monday", "wednesday", "friday"],
+                details : {
+                    semester: "Winter",
+                    year:2025
+                }
+            }
+
+            classInfo.instructor = "Dr. Abdellatif";
+            console.log("className: " + classInfo.className);
+            console.log("instructor: " + classInfo.instructor);
+            console.log(classInfo.students);
+            
+            console.log(`semester: ${classInfo.details.semester}`);
+
+            console.log(classInfo);
+
+            let {className, students} = classInfo;
+            console.log("destructured className: " + className);
+            console.log("destrcutured students; " + students);
+
+            let {semester, year} = classInfo.details;
+            console.log("destructured semester: " + semester);
+            console.log("destructured year: " + year);
+
+            let [student1, student2, ...remainingStudents] = classRoster;
+            
+            console.log(student1, student2, remainingStudents);
+
+
+
+
+        </script>
+    </body>
+</html>
