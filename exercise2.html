@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 - Exercise 2</title>
+    </head>
+    <body>
+        <h1>JavaScript Lab</h1>
+        <script>
+            //declaring functions
+            /*function add(a, b){
+                return a + b;
+            }
+            function subtract(a, b){
+                return a - b;
+            }
+            console.log(add(10, 20));
+            console.log(subtract(20, 10));
+            */
+
+            //Using Default parameters
+            /*function add(a, b = 1){
+                return a + b;
+            }
+            function subtract(a, b = 10){
+                return a - b;
+            }
+            console.log(add(10));
+            console.log(add(10, 50));
+
+            console.log(subtract(5));
+            console.log(subtract(11, 7));
+            */
+
+            //Implementing Arrow Functions
+            let add = (a, b) => {
+                return a + b;
+            }
+            let subtract = (a, b) => {
+                return a - b;
+            }
+            let multiply = (a, b) => {
+                return a*b;
+            }
+            let divide = (a, b) => { 
+                if (b !== 0) return a/b;
+                else console.log("Can't divide by 0");
+            }
+
+            console.log(add(10, 10));
+            console.log(subtract(10, 16));
+            console.log(multiply(10, 8));
+            console.log(divide(1, 8));
+            console.log(divide(10, 0));
+
+            //Understanding Callback functions
+            function calculator(a, b, callback){
+                return callback(a, b);
+            }
+
+            console.log(calculator(10, 20, add));
+            console.log(calculator(12, 12, multiply));
+
+        </script>
+    </body>
+</html>
